@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js SSR Template for Elastic Beanstalk
 
-## Getting Started
+A template for Next.js SSR applications deployed on AWS Elastic Beanstalk with Node.js 20, using Next.js 15.3.1 and specific configurations.
 
-First, run the development server:
+## Purpose
+This repository is a template for creating new Next.js applications with the same dependencies and Elastic Beanstalk setup as `template-app`. It includes:
+- Next.js 15.3.1, React 18, and Node.js 20.x.
+- Elastic Beanstalk configuration for server-side builds on `t2.micro` instances.
+- Nginx proxy to port 3000 and health check endpoint (`/api/health`).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Prerequisites
+- Node.js 20.x
+- AWS CLI and EB CLI (`pip install awsebcli`)
+- Git
+- AWS account with Elastic Beanstalk access
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Creating a New Application
+1. **Create a New Repository**:
+   - Go to `https://github.com/epolga/template-app`.
+   - Click **Use this template** > **Create a new repository**.
+   - Set:
+     - **Owner**: Your GitHub username (e.g., `epolga`).
+     - **Repository name**: e.g., `my-new-app`.
+     - **Visibility**: Public or Private.
+   - Click **Create repository from template**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Clone the New Repository**:
+   ```bash
+   git clone https://github.com/epolga/my-new-app
+   cd my-new-app
