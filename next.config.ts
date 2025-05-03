@@ -1,7 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    reactStrictMode: true,
+    // Ensure Next.js outputs standalone build for Elastic Beanstalk
+    output: 'standalone'
 };
 
-export default nextConfig;
+module.exports = nextConfig;
